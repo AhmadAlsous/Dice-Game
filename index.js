@@ -1,6 +1,6 @@
-if (window.performance.navigation.type === 1) {
+if (performance.getEntriesByType("navigation")[0].type === "reload") {
     rollDice();
-  }
+}
 function rollDice(){
     var randomNumber1=Math.floor(Math.random()*6)+1;
     var randomImg1="images/dice"+randomNumber1+".png";
